@@ -28,7 +28,7 @@ class CustomerapiApplicationTests {
 	@Test
 	@Order(1)
 	public void numberOfCustumerTest(){
-		assertThat(customerController.customerNumber()).isEqualTo(7);
+		assertThat(customerController.customerNumber()).isEqualTo(0);
 	}
 
 	@Test
@@ -50,10 +50,10 @@ class CustomerapiApplicationTests {
 	@Test
 	@Order(4)
 	public void findOneCustomerTest(){
-		Customer customer = customerController.findOne(1L);
-		assertThat(customer.getId()).isEqualTo(1L);
-		assertThat(customer.getFirstname()).isEqualTo("Raissa");
-		assertThat(customer.getLastname()).isEqualTo("Takoudjou");
+		Customer customer = customerController.findOne(13L);
+		assertThat(customer.getId()).isEqualTo(13L);
+		assertThat(customer.getFirstname()).isEqualTo("New");
+		assertThat(customer.getLastname()).isEqualTo("New");
 	}
 
 	@Test
