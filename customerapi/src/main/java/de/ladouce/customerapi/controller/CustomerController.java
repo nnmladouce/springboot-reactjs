@@ -10,15 +10,19 @@ import java.util.List;
 @RestController
 @RequestMapping("/customer")
 @CrossOrigin
-public class CustomerController {
+public class CustomerController{
 
     private CustomerRepository customerRepository;
+
 
     public CustomerController(CustomerRepository customerRepository){
         this.customerRepository=customerRepository;
     }
 
+
+
     public int customerNumber(){
+
         return customerRepository.findAll().size();
     }
 
